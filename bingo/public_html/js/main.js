@@ -9,7 +9,8 @@ var $divNumerosSorteados,
     $numeroSorteado;
 
 listenerNumerosSorteados.onNumeroSorteado = function(numero, bingo) {
-    $($divsNumeros[numero-1]).addClass('sorteado');
+    $('.ultimoSorteado').removeClass('ultimoSorteado');
+    $($divsNumeros[numero-1]).addClass('sorteado').addClass('ultimoSorteado');
 };
 
 listenerNumerosSorteados.onReiniciado = function(bingo) {

@@ -211,21 +211,41 @@ textarea[contenteditable] {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
+only screen and (min-resolution: 144dpi) {
     /* Style adjustments for viewports that meet the condition */
 }
 
+@keyframes ultimoSorteado {
+
+
+    from {
+        background-color: white;
+        font-size: 2em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        display: inline-block;
+        width: 4em;
+        border: 1px solid black;
+        text-align: center;
+        color: darkgray;
+    }
+    to {
+        font-weight: bold;
+        color: white;
+        background-color: red;
+    }
+}
 
 @keyframes animacao {
 
     0% {
-       opacity: 1;
+        opacity: 1;
     }
     50% { display: block;
-     opacity: 1;
+          opacity: 1;
     }    
     100% {
-      opacity: 0;
+        opacity: 0;
     }
 }
 
@@ -271,4 +291,11 @@ textarea[contenteditable] {
 }
 .ordemSorteio:first-child:before {
     content: '';
+}
+
+.numero.sorteado.ultimoSorteado {
+    animation-name: ultimoSorteado;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    background-color: red;
 }
